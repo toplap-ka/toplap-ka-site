@@ -1,0 +1,41 @@
+body {
+    background-color: #27f468;
+    font-family: "Roboto Mono";
+}
+
+h1 {
+    text-align: center;
+    font-size: 7em;
+    color: white;
+/*
+    background: linear-gradient(#27f468, black );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    */
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    color: black;
+}
+
+h3 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.25em;
+    border-bottom: 3px solid #ffffff;
+}
+
+a {
+    color: #ea27f4;
+    font-weight: bold;
+}
+
+a:hover {
+    color: white;
+}
