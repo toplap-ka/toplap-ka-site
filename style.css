@@ -55,6 +55,11 @@ a:hover {
     border: 1px solid #666666;
 }
 
+ul.dates {
+    list-style: none;
+    padding-left: 0px;
+}
+
 /* Temporary until Bootstrap 5 brings these rules back... */
 
 .embed-responsive {
