@@ -60,6 +60,12 @@ ul.dates {
     padding-left: 0px;
 }
 
+ul.dates li {
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+    padding-bottom: 8px;
+}
+
 /* Temporary until Bootstrap 5 brings these rules back... */
 
 .embed-responsive {
