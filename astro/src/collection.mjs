@@ -19,6 +19,7 @@ export function escapeHtml(unsafe) {
 export const collection = {
   sc1: {
     title: "Powerset",
+    img: "powerset.png",
     code: raw`
 "_\\|/_".powerset.flat.join
           _\_\|_|\
@@ -35,51 +36,62 @@ export const collection = {
   sc2: {
     author: "Matthias Schneiderbanger",
     title: "Clicks and Cuts",
+    img: "clicks_and_cuts_matthias_schneiderbanger.png",
     twitter: "https://twitter.com/schneiderbanger/status/389817867715092480",
     soundcloud: "https://on.soundcloud.com/KCTNk",
+    url: "https://on.soundcloud.com/KCTNk",
     code: raw`play({a=LFNoise0.kr([5,6]);CombC.ar(RLPF.ar(Saw.ar(a.range(1,6)),a.range(1e3,1.5e4),3e-4),1,LFNoise0.kr(1).range(0.02,1),8)*0.01})`,
   },
   sc3: {
     author: "Matthias Schneiderbanger",
     title: "Deterministic Sorting",
+    img: "deterministic_sorting_matthias_schneiderbanger.png",
     twitter: "https://twitter.com/schneiderbanger/status/225197213536620545",
+    url: "https://on.soundcloud.com/8dj7s",
     soundcloud: "https://on.soundcloud.com/8dj7s",
     code: raw`play{LFTri.ar(DegreeToKey.kr(as(Scale.zhi,LocalBuf),Demand.kr(Saw.kr(10),0,Dseq((1..12).powerset.flat)),12,1,[42,49]).midicps)}`,
   },
   sc4: {
     author: "Elmo",
     title: "Strings",
+    img: "strings_elmo.png",
     code: raw`play{LFTri.ar(DegreeToKey.kr(as(Scale.zhi,LocalBuf),Demand.kr(Saw.kr(10),0,Dseq((1..12).powerset.flat)),12,1,[42,49]).midicps)}`,
   },
   sc5: {
     author: "Elmo",
     title: "Happy Floppy",
+    img: "happy_floppy_elmo.png",
     code: raw`play{a=LFNoise0;Splay.ar(Formant.ar((1..8).collect(_* 50),a.ar((1..3)).range(50, a.ar(1).range(50,2000)),a.ar((1..4)).range(50,1500)))/3}`,
   },
   sc6: {
     author: "dkh",
     title: "angry waves n beats",
+    img: "angry_waves_n_beats_dkh.png",
     code: raw`play{a=LFNoise0;Splay.ar(Formant.ar((1..8).collect(_* 50),a.ar((1..3)).range(50, a.ar(1).range(50,2000)),a.ar((1..4)).range(50,1500)))/3}`,
   },
   sc7: {
     author: "dkh",
     title: "delay delights",
+    img: "delay_delights_dkh.png",
     code: raw`{var a=LFNoise2;LeakDC.ar(CombC.ar(Decay2.ar(Impulse.ar(a.ar(1).range(1,2)))*SinOsc.ar(99),4,a.ar(a.ar(1!2).range(1,2)).range(1/99,4),9))}.play;`,
   },
   sc8: {
     author: "luiiuuuiiiii",
-    title: "waits",
+    title: "waiting for ever(s)",
+    img: "luiiuuuiiiii_waiting_for_ever.png",
     code: raw`{inf.do{1.wait}}.fork
 {1.do{inf.wait}}.fork`,
   },
   sc9: {
     author: "Jakob Schreiber",
     title: "soft to wicked",
+    img: "jakob_schreiber_soft_to_wicked.png",
     code: raw`play{l=LFNoise2;Mix.ar(DFM1.ar(SinOsc.ar([40,41,50,150]*l.ar(l.ar(2,0.4,0.5).poll,4,5).floor),l.ar(0.2,990,1000),l.ar(0.2,1,1)*2))!2/10}`,
   },
   hd1: {
     author: "Paul Henri",
     title: "Glitch Juice",
+    img: "paul_henri_glitch_juice.png",
     url: "https://hydra.ojack.xyz/?sketch_id=Pr16zeXkfaLUd5Kd",
     code: raw`// licensed with CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // glitch juice
@@ -105,7 +117,8 @@ src(o0)
   hd2: {
     author: "Paul Henri",
     title: "Lava Lamp 2",
-    urL: "https://hydra.ojack.xyz/?sketch_id=ExeOTZVE9hrn6IIW",
+    img: "paul_henri_lava_lamp_2.png",
+    url: "https://hydra.ojack.xyz/?sketch_id=ExeOTZVE9hrn6IIW",
     code: raw`// licensed with CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // lava lamp 2
 // paul henri
@@ -129,7 +142,8 @@ osc(6,0,1.8).mask( //shape(99,0.5,0.00004).mask(
   hd3: {
     author: "nervousdata",
     title: "Spalten Mengen Platten",
-    urL: "https://hydra.ojack.xyz/?sketch_id=vcWMV3vi1ykmd9U1",
+    url: "https://hydra.ojack.xyz/?sketch_id=vcWMV3vi1ykmd9U1",
+    img: "nervousdata_spalten_mengen_platten_kamuna_4.png",
     code: raw`// licensed with CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // by nervousdata
 saetz = ["geraden Linien", "gezogenen Geraden", "geschlossenen Bahnen", "entsprechenden Mengen", "horizontalen Platten", "derartigen Spalten", "vorherigen Knoten", "wirklichen Wellen", "leitenden Massen", "wenigen Minuten", "weiteren Zeiten", "erregten Funken", "übrigen Reihen", "vielen Seiten", "neuen Formen"];
@@ -166,6 +180,7 @@ spalt()
     author: "nervousdata",
     title: "The Twisting",
     url: "https://hydra.ojack.xyz/?sketch_id=rhKdR4tUnVqL9gzX",
+    img: "nervousdata_the_twisting_kamuna_3.png",
     code: raw`// licensed with CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // by nervousdata
 
@@ -200,6 +215,7 @@ text()
     author: "Felix Roos",
     title: "Geistkrümel",
     software: "Strudel",
+    img: "7VoIcReDMO-M.png",
     url: "https://strudel.tidalcycles.org/?7VoIcReDMO-M",
     code: raw`
 n(run(8).palindrome())
@@ -217,6 +233,7 @@ x .add(note(n * .25)))
     author: "Felix Roos",
     title: "Jux Engine",
     software: "Strudel",
+    img: "dDsZmIqDmCXf.png",
     url: "https://strudel.tidalcycles.org/?dDsZmIqDmCXf",
     code: `
 s("bd rim, [~ hh*2]")
@@ -235,6 +252,7 @@ saw.range(1,9)))// fr
     author: "Felix Roos",
     title: "Well Tampered",
     software: "Strudel",
+    img: "kl_UEvr3rc07.png",
     url: "https://strudel.tidalcycles.org/?kl_UEvr3rc07",
     code: `
 n(run(12)).chord("D")
@@ -253,6 +271,7 @@ rarely(add(note(12)))
     author: "Felix Roos",
     title: "Blue Screen of Breath",
     software: "Strudel",
+    img: "VUbgKpHsf-G9.png",
     url: "https://strudel.tidalcycles.org/?VUbgKpHsf-G9",
     code: `
 let chords =chord(\`<

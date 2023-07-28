@@ -43,17 +43,32 @@ const data = Object.entries(collection);
           <h2 class="text-5xl font-bold">TOPLAP Karlsruhe</h2>
         </a>
       </div>
-      <div class="prose m-auto">
+      <div class="prose m-auto p-2">
         {
           data.map(([code, item]) => (
-            <div>
-              <a href={`#${code}`} class="no-underline">
-                <h4 id={code}>
+            <div class="flex flex-col items-center mt-4">
+              <a href={`#${code}`} class="no-underline flex">
+                <h2 id={code}>
                   {item.author ? item.author + " - " : ""}
                   {item.title}
-                </h4>
+                </h2>
               </a>
-              <pre class="bg-transparent text-black p-0">{item.code}</pre>
+              {item.url && (
+                <div class="not-prose">
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    class="border border-black p-2 hover:text-white hover:bg-black"
+                  >
+                    open
+                  </a>
+                </div>
+              )}
+              {item.img && <img src={item.img} class="w-96" />}
+
+              <div class=" max-w-full">
+                <pre class="bg-black break-all rounded-none">{item.code}</pre>
+              </div>
             </div>
           ))
         }
