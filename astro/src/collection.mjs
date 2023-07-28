@@ -102,7 +102,7 @@ src(o0)
 )
 .out()`,
   },
-  h2: {
+  hd2: {
     author: "Paul Henri",
     title: "Lava Lamp 2",
     urL: "https://hydra.ojack.xyz/?sketch_id=ExeOTZVE9hrn6IIW",
