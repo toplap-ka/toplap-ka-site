@@ -102,7 +102,7 @@
               <img src="strings_elmo.png" class="w-96">
 
               <div class=" max-w-full">
-                <pre class="bg-black break-all rounded-none">play{LFTri.ar(DegreeToKey.kr(as(Scale.zhi,LocalBuf),Demand.kr(Saw.kr(10),0,Dseq((1..12).powerset.flat)),12,1,[42,49]).midicps)}</pre>
+                <pre class="bg-black break-all rounded-none">play{n=LFNoise0;m=10;Splay.ar(CombC.ar(Saw.ar(n.ar((1..m)*0.1,m,m).round*m, 1/m),0.1,1/n.ar(LFNoise1.ar((1..m))).range(50,100),m)).tanh}</pre>
               </div>
             </div><div class="flex flex-col items-center mt-4">
               <a href="#sc5" class="no-underline flex">
