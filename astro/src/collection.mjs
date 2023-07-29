@@ -67,7 +67,7 @@ export const collection = {
     author: "dkh",
     title: "angry waves n beats",
     img: "angry_waves_n_beats_dkh.png",
-    code: raw`play{a=LFNoise0;Splay.ar(Formant.ar((1..8).collect(_* 50),a.ar((1..3)).range(50, a.ar(1).range(50,2000)),a.ar((1..4)).range(50,1500)))/3}`,
+    code: raw`{var a=LFNoise2;(SinOsc.ar(Array.series(64,a.ar(a.ar(2).range(1,10)).range(1,90),a.ar(a.ar(2).range(1,10)).range(1,15))).sum).tanh!2;}.play;`,
   },
   sc7: {
     author: "dkh",
