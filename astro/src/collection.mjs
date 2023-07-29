@@ -55,7 +55,7 @@ export const collection = {
     author: "Elmo",
     title: "Strings",
     img: "strings_elmo.png",
-    code: raw`play{LFTri.ar(DegreeToKey.kr(as(Scale.zhi,LocalBuf),Demand.kr(Saw.kr(10),0,Dseq((1..12).powerset.flat)),12,1,[42,49]).midicps)}`,
+    code: raw`play{n=LFNoise0;m=10;Splay.ar(CombC.ar(Saw.ar(n.ar((1..m)*0.1,m,m).round*m, 1/m),0.1,1/n.ar(LFNoise1.ar((1..m))).range(50,100),m)).tanh}`,
   },
   sc5: {
     author: "Elmo",
