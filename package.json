@@ -1,0 +1,14 @@
+{
+  "name": "toplap-ka-site",
+  "version": "1.0.0",
+  "description": "Hi Karlsruhe live coders! Request edit rights to this repo from Patrick or send a pull request if you want to do any changes.",
+  "main": "main.js",
+  "scripts": {
+    "build": "cd astro && npm run build",
+    "dev": "cd astro && npm run dev",
+    "preview": "npx serve",
+    "postinstall": "cd astro && npm i"
+  },
+  "author": "",
+  "license": "ISC"
+}

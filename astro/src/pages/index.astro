@@ -1,0 +1,78 @@
+---
+import { collection, escapeHtml, shuffle } from "../collection.mjs";
+//const data = shuffle(Object.entries(collection));
+const data = Object.entries(collection);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta property="og:title" content="_\|/_ TOPLAP Karlsruhe" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://toplap-ka.de" />
+    <meta
+      property="og:description"
+      content="We are a live coding community based in Karlsruhe, Germany."
+    />
+
+    <meta property="og:image" content="https://toplap-ka.de/og-new.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+
+    <meta property="og:locale" content="en_US" />
+
+    <title>_\|/_ TOPLAP Karlsruhe</title>
+  </head>
+  <body>
+    <div class="w-[800px] max-w-full m-auto shadow-2xl my-8 py-8">
+      <div class="flex justify-center items-center py-4">
+        <a href="/" class="block text-center space-y-6">
+          <h1 class="text-8xl text-gray-500">_\|/_</h1>
+          <h2 class="text-5xl font-bold">TOPLAP Karlsruhe</h2>
+        </a>
+      </div>
+      <div class="prose m-auto p-2">
+        {
+          data.map(([code, item]) => (
+            <div class="flex flex-col items-center mt-4">
+              <a href={`#${code}`} class="no-underline flex">
+                <h2 id={code}>
+                  {item.author ? item.author + " - " : ""}
+                  {item.title}
+                </h2>
+              </a>
+              {item.url && (
+                <div class="not-prose">
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    class="border border-black p-2 hover:text-white hover:bg-black"
+                  >
+                    open
+                  </a>
+                </div>
+              )}
+              {item.img && <img src={item.img} class="w-96" />}
+
+              <div class=" max-w-full">
+                <pre class="bg-black break-all rounded-none">{item.code}</pre>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </body>
+</html>
