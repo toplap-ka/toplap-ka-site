@@ -1,7 +1,7 @@
 body {
     background-color: #f4f4f4;
     font-family: "Cutive Mono", "Roboto Mono", monospace;
-    background-image: conic-gradient(#f5f4f4 0deg, #807c85 45deg ,white 110deg, white 210deg,white 220deg, black 220deg, #565f3d 240deg, #fb8e02 245deg, #f5f4f4 255deg);
+    /* background-image: conic-gradient(#f5f4f4 0deg, #807c85 45deg ,white 110deg, white 210deg,white 220deg, black 220deg, #565f3d 240deg, #fb8e02 245deg, #f5f4f4 255deg); */
 }
 
 h1 {
