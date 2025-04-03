@@ -1,141 +1,167 @@
 <style>
   body {
-  	font-family:monospace !important
-    
-    zoom: 4; 
-sc }
+    font-family: monospace !important;
+  }
   select {
-  	background-color:rgb(100,0,100);
-    color:white;
-    border:0;
-    font-size:20px
+    background-color: rgb(100, 0, 100);
+    color: white;
+    border: 0;
+    font-size: 20px;
   }
 </style>
-<div style="position:absolute;right:0;top:0;font-size:80px">_\|/_</div>
-<div style="position:absolute;right:20px;top:110px;font-size:20px">toplap-ka.de</div>
+<div style="position: absolute; right: 0; top: 0; font-size: 80px">_\|/_</div>
+<div style="position: absolute; right: 20px; top: 110px; font-size: 20px">
+  toplap-ka.de
+</div>
 <div id="acro">
-<select>
-        <!-- <option value="temporal">temporal</option>  probably don't event need value? -->
-<!--        <option>Keep</option>-->
-        <option>totally</option>
-        <option>transdimensional</option>
-        <option>terrestrial</option>
-        <option>the</option>
-    </select><br/>
-    <select>
-<!--        <option>Karlsruhe</option>-->
-        <option>over</option>
-        <option>organisation</option>
-        <option>operators</option>
-        <option>online</option>
-        <option>only</option>
-    </select><br/>
-    <select>
-<!--        <option>boring</option>-->
-        <option>produced</option>
-        <option>place</option>
-        <option>piupiu</option>
-    </select><br/>
-    <select>
-        <option>live</option>
-        <option>lonely</option>
-        <option>latent</option>
-        <option>lustig</option>
-    </select><br/>
-    <select>
-        <option>artistic</option>
-        <option>acoustic</option>
-        <option>active</option>
-        <option>arbitrary</option>
-        <option>algorithmic</option>
-        <option>and</option>
-    </select><br/>
-    <select>
-        <option>programming</option>
-        <option>people</option>
-        <option>palaver</option>
-        <option>precious</option>
-  </select></div><br/>
+  <select>
+    <!-- <option value="temporal">temporal</option>  probably don't event need value? -->
+    <!--        <option>Keep</option>-->
+    <option>totally</option>
+    <option>transdimensional</option>
+    <option>terrestrial</option>
+    <option>the</option></select
+  ><br />
+  <select>
+    <!--        <option>Karlsruhe</option>-->
+    <option>over</option>
+    <option>organisation</option>
+    <option>operators</option>
+    <option>online</option>
+    <option>only</option></select
+  ><br />
+  <select>
+    <!--        <option>boring</option>-->
+    <option>produced</option>
+    <option>place</option>
+    <option>piupiu</option></select
+  ><br />
+  <select>
+    <option>live</option>
+    <option>lonely</option>
+    <option>latent</option>
+    <option>lustig</option></select
+  ><br />
+  <select>
+    <option>artistic</option>
+    <option>acoustic</option>
+    <option>active</option>
+    <option>arbitrary</option>
+    <option>algorithmic</option>
+    <option>and</option></select
+  ><br />
+  <select>
+    <option>programming</option>
+    <option>people</option>
+    <option>palaver</option>
+    <option>precious</option>
+  </select>
+</div>
+<br />
 <script>
   let ac;
-  const acro = document.getElementById('acro')
+  const acro = document.getElementById("acro");
   let play = (index) => {
-          ac = ac || new AudioContext();
-          const osc = ac.createOscillator()
-          osc.frequency.value = 440 * 2**(index/12)
-          osc.connect(ac.destination)
-          osc.start(ac.currentTime+.01)
-          osc.stop(ac.currentTime+.1)
-  }
-    for(let i in acro.children) {
-      const select = acro.children[i];
-      if(select.tagName==='SELECT') {
-        select.addEventListener('change', (e) => {
-          const index = Array.from(select.children).findIndex(op => op.innerText === select.value)
-          play(index);
-        });
-      }
+    ac = ac || new AudioContext();
+    const osc = ac.createOscillator();
+    osc.frequency.value = 440 * 2 ** (index / 12);
+    osc.connect(ac.destination);
+    osc.start(ac.currentTime + 0.01);
+    osc.stop(ac.currentTime + 0.1);
+  };
+  for (let i in acro.children) {
+    const select = acro.children[i];
+    if (select.tagName === "SELECT") {
+      select.addEventListener("change", (e) => {
+        const index = Array.from(select.children).findIndex(
+          (op) => op.innerText === select.value
+        );
+        play(index);
+      });
     }
+  }
   function update() {
-    for(let i in acro.children) {
-      if(acro.children[i].tagName==='SELECT') {
-        const select = acro.children[i]
+    for (let i in acro.children) {
+      if (acro.children[i].tagName === "SELECT") {
+        const select = acro.children[i];
         const options = acro.children[i].children;
-        const index = Math.floor(Math.random()*options.length)
-        select.value = options[index].innerText
+        const index = Math.floor(Math.random() * options.length);
+        select.value = options[index].innerText;
       }
     }
     //setInterval(() => update(), 4000)
   }
-  update()
+  update();
 </script>
 <style>
-@keyframes anim {
-  from {background-color: rgb(100, 100, 200);}
-  to {background-color: rgb(100, 70, 255);}
-}
+  @keyframes anim {
+    from {
+      background-color: rgb(100, 100, 200);
+    }
+    to {
+      background-color: rgb(100, 70, 255);
+    }
+  }
   body {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     background-color: coral;
-  	animation-name: anim;
-  	animation-duration: 4s;
+    animation-name: anim;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
 </style>
-<img src="https://www.cameronsworld.net/img/content/10/7.gif"/>
+<img src="https://www.cameronsworld.net/img/content/10/7.gif" />
 <img src="https://www.cameronsworld.net/img/content/10/14.gif" />
-<img src="https://www.cameronsworld.net/img/content/15/row-2/7.gif"/>
-<img src="https://www.cameronsworld.net/img/content/25/18.gif"/>
-<img src="https://www.cameronsworld.net/img/content/13/2.gif" width="50" height="50"/>
-
+<img src="https://www.cameronsworld.net/img/content/15/row-2/7.gif" />
+<img src="https://www.cameronsworld.net/img/content/25/18.gif" />
+<img
+  src="https://www.cameronsworld.net/img/content/13/2.gif"
+  width="50"
+  height="50"
+/>
 
 <h1>_\|/_</h1>
 <h2>toplap karlsruhe</h2>
-<p>We are a live coding community based in Karlsruhe, Germany. We want to meet regularly in the physical and virtual space, organize workshops and concerts and connect with other live coding communities all around the globe.</p>
+<p>
+  We are a live coding community based in Karlsruhe, Germany. We want to meet
+  regularly in the physical and virtual space, organize workshops and concerts
+  and connect with other live coding communities all around the globe.
+</p>
 
-<img src="https://www.cameronsworld.net/img/content/26/left-side/14.gif"/>
+<img src="https://www.cameronsworld.net/img/content/26/left-side/14.gif" />
 
 <script>
   // You can use the console window at the bottom
-  var h1 = document.querySelector('h1');
+  var h1 = document.querySelector("h1");
   console.log(h1.textContent);
 </script>
 
 <figure>
   <figcaption>Listen to the T-Rex:</figcaption>
-  <audio controls src="https://cdn.freesound.org/previews/769/769940_13999124-lq.mp3"></audio>
-  <a href="https://cdn.freesound.org/previews/769/769940_13999124-lq.mp3"> Download audio </a>
+  <audio
+    controls
+    src="https://cdn.freesound.org/previews/769/769940_13999124-lq.mp3"
+  ></audio>
+  <a href="https://cdn.freesound.org/previews/769/769940_13999124-lq.mp3">
+    Download audio
+  </a>
 </figure>
 <figure>
   <figcaption>Listen to the T-Rex:</figcaption>
   <audio controls autoplay>
-  	<source src="https://cdn.freesound.org/previews/588/588625_5661246-lq.mp3" type="audio/mpeg">
+    <source
+      src="https://cdn.freesound.org/previews/588/588625_5661246-lq.mp3"
+      type="audio/mpeg"
+    />
   </audio>
 </figure>
 
- <audio controls autoplay>
-  <source src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-107506/zapsplat_animals_dinosaur_flying_creature_squawk_forest_reverb_109820.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio> 
-<img src="https://www.cameronsworld.net/img/content/18/11.gif"\>
+<audio controls autoplay>
+  <source
+    src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-107506/zapsplat_animals_dinosaur_flying_creature_squawk_forest_reverb_109820.mp3"
+    type="audio/mpeg"
+  />
+  Your browser does not support the audio element.
+</audio>
+<img src="https://www.cameronsworld.net/img/content/18/11.gif" \ />
