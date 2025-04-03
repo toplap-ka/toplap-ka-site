@@ -10,7 +10,15 @@
     font-size:20px
   }
 </style>
+
+ <audio controls autoplay>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
 <div style="position:absolute;right:0;top:0;font-size:80px">_\|/_</div>
+<div style="position:absolute;right:20px;top:110px;font-size:20px">toplap-ka.de</div>
+<div id="acro">
 <select>
         <!-- <option value="temporal">temporal</option>  probably don't event need value? -->
         <option>Keep</option>
@@ -52,15 +60,55 @@
         <option>people</option>
         <option>palaver</option>
         <option>precious</option>
-    </select><br/>
+  </select></div><br/>
+<script>
+  const acro = document.getElementById('acro')
+  function update() {
+    for(let i in acro.children) {
+      if(acro.children[i].tagName==='SELECT') {
+        const select = acro.children[i]
+        const options = acro.children[i].children;
+        const index = Math.floor(Math.random()*options.length)
+        select.value = options[index].innerText
+      }
+    }
+    setInterval(() => update(), 4000)
+  }
+  update()
+  
+</script>
+<!-- windows 98 -->
+<!--<link
+  rel="stylesheet"
+  href="https://unpkg.com/98.css"
+>
 
+<div class="window" style="margin: 32px; width: 250px">
+      <div class="title-bar">
+        <div class="title-bar-text">
+          My First VB4 Program
+        </div>
 
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>Hello, world!</p>
+        <section class="field-row" style="justify-content: flex-end">
+          <button>OK</button>
+          <button>Cancel</button>
+        </section>
+      </div>
+    </div>-->
 <style>
   
 
 @keyframes anim {
-  from {background-color: rgb();}
-  to {background-color: yellow;}
+  from {background-color: rgb(100, 100, 200);}
+  to {background-color: rgb(100, 70, 255);}
 }
   body {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -73,9 +121,9 @@
 </style>
 <img src="https://www.cameronsworld.net/img/content/10/7.gif"/>
 <img src="https://www.cameronsworld.net/img/content/10/14.gif"/>
-<img src="https://www.cameronsworld.net/img/content/13/2.png"/>
-<img src="https://www.cameronsworld.net/img/content/15/row-2/7.png"/>
-
+<img src="https://www.cameronsworld.net/img/content/13/2.gif"/>
+<img src="https://www.cameronsworld.net/img/content/15/row-2/7.gif"/>
+<img src="https://www.cameronsworld.net/img/content/25/18.gif"/>
 
 
 <h1>_\|/_</h1>
@@ -89,4 +137,10 @@
   console.log(h1.textContent);
 </script>
 
-<img src="https://www.cameronsworld.net/img/content/18/10.png"\>
+<figure>
+  <figcaption>Listen to the T-Rex:</figcaption>
+  <audio controls src="https://cdn.freesound.org/previews/769/769940_13999124-lq.mp3"></audio>
+  <a href="https://cdn.freesound.org/previews/769/769940_13999124-lq.mp3"> Download audio </a>
+</figure>
+
+<img src="https://www.cameronsworld.net/img/content/18/11.gif"\>
