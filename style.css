@@ -1,13 +1,14 @@
 body {
-    background-color: #f4f4f4;
-    font-family: "Cutive Mono", "Roboto Mono", monospace;
+    background-color: #696969;
+    font-family: "Cutive Mono","Roboto Mono", monospace;
     /* background-image: conic-gradient(#f5f4f4 0deg, #807c85 45deg ,white 110deg, white 210deg,white 220deg, black 220deg, #565f3d 240deg, #fb8e02 245deg, #f5f4f4 255deg); */
 }
 
 h1 {
     text-align: center;
-    font-size: 7em;
-    color: #666666;
+    /* font-weight: bold; */
+    font-size: 6em;
+    color: #181818;
 /*
     background: linear-gradient(#27f468, black );
     background-clip: text;
@@ -20,8 +21,12 @@ h1 {
 
 h2 {
     text-align: center;
-    font-weight: bold;
-    font-size: 3em;
+    /* font-weight: bold; */
+    font-family:"Roboto Mono";
+    font-size: 1.618em;
+    letter-spacing: 11px;
+    /* this will be like in the logo */
+    /* margin-left: 50%; */
     color: black;
 }
 
@@ -42,12 +47,14 @@ a {
     font-weight: bold;
 }
 
+
 a:hover {
-    color: #2c3f33;
+    background-color: #fb8e02;
+    color: #fb8e02;
 }
 
 #content {
-    background-color: rgba(244, 244, 244, 0.8);
+    background-color: rgba(229, 229, 229, 0.9);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2)
 }
 
