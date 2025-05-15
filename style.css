@@ -43,9 +43,11 @@ h4 {
     margin-top: 1em;
 }
 
-h5{
-    text-align: center;
+h5 {
+    font-weight: bold;
+    margin-top: 1em;
 }
+
 
 a {
     color: #fb8e02;
