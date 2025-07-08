@@ -65,7 +65,8 @@ a:hover {
 }
 
 #content {
-    background-color: rgba(229, 229, 229, 0.9);
+    /* background-color: rgba(229, 229, 229, 0.9); */
+    background-color: rgba(241, 241, 241, 0.9);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2)
 }
 
@@ -80,7 +81,7 @@ ul.dates {
 
 ul.dates li {
     margin-bottom: 20px;
-    border-bottom: 2px solid rgba(229, 229, 229, 0.9);
+    border-bottom: 2px solid rgba(244, 244, 244, 0.9);
     padding-bottom: 8px;
 }
 
