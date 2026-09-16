@@ -85,9 +85,9 @@ ul.dates {
 }
 
 ul.dates li {
-    margin-bottom: 3px;
-    border-bottom: 2px solid rgba(244, 244, 244, 0.7);
-    padding-bottom: 8px;
+    margin-bottom: 12px;
+    border-bottom: 1.5px solid rgba(244, 244, 244, 0.4);
+    padding-bottom: 12px;
 }
 
 /* Temporary until Bootstrap 5 brings these rules back... */
